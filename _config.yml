@@ -20,9 +20,10 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
+encoding: 'utf-8'
 title: 'HNU Programming Language Research Group'
-logo: "/assets/logos/Lambda_Logo.png"
-logo_name: "PLRG @ HNU EE"
+logo: '/assets/logos/Lambda_Logo.png'
+logo_name: 'PLRG @ HNU EE'
 description: 'This is my new website'
 url: 'https://hnu-pl.github.io'
 baseurl: ''
