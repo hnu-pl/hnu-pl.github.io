@@ -23,7 +23,7 @@ plugins:
 encoding: 'utf-8'
 title: 'HNU Programming Language Research Group'
 logo: '/assets/logos/Lambda_Logo.png'
-logo_name: 'PLRG @ HNU EE'
+logo_name: 'PLRG @ HNU CE'
 description: 'This is my new website'
 url: 'https://hnu-pl.github.io'
 baseurl: ''
