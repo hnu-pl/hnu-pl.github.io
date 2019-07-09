@@ -27,7 +27,7 @@ description: 'This is my new website'
 url: 'https://hnu-pl.github.io'
 baseurl: ''
 permalink: pretty
-
+timezone: Europe/London
 
 # Pagination
 paginate: 5
