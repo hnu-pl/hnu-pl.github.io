@@ -20,12 +20,12 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://hnu-pl.github.io'
-baseurl: ''
 title: 'HNU Programming Language Research Group'
-description: 'This is my new website'
 logo: "/assets/logos/Lambda_Logo.png"
 logo_name: "PLRG @ HNU EE"
+description: 'This is my new website'
+url: 'https://hnu-pl.github.io'
+baseurl: ''
 permalink: pretty
 
 
