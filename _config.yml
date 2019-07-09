@@ -22,7 +22,7 @@ plugins:
 # Site settings
 encoding: 'utf-8'
 title: 'HNU Programming Language Research Group'
-logo: '/assets/logos/logo.png'
+logo: '/assets/logos/logo.svg'
 logo_name: 'PLRG @ HNU CE'
 description: 'This is my new website'
 url: 'https://hnu-pl.github.io'
