@@ -31,11 +31,6 @@ baseurl: ''
 permalink: pretty
 timezone: Europe/London
 
-# for math
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-
 # Pagination
 paginate: 5
 paginate_path: blog/page:num
