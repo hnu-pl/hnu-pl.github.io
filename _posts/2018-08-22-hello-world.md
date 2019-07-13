@@ -13,3 +13,5 @@ This is my very first blog post. I haven't written anything yet but I'm sure I h
 Testing inline math <script type="math/tex">\alpha</script>
 
 Testing display math <script type="math/tex; mode=display">\alpha</script>
+
+<iframe height="400px" width="100%" src="https://repl.it/@kyagrd/Hello-Haskell?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
