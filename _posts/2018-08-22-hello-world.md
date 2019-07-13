@@ -10,4 +10,4 @@ This is my very first blog post. I haven't written anything yet but I'm sure I h
 
 한글도 되니요?
 
-Testing math $\alpha$ 
+Testing math <script type="math/tex">\alpha</script>
