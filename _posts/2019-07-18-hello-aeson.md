@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Aeson 소개 - 하스켈의 JSON 라이브러리
+title: Aeson 소개 (하스켈 JSON 라이브러리)
 categories:
 - General
 feature_image: "https://picsum.photos/id/872/1300/200"
