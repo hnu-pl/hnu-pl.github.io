@@ -17,15 +17,11 @@ import Data.Text
 
 :type encode
 :type decode
-```
-<div style='background-color: yellow'>
-  
+```  
 ```
 encode :: forall a. ToJSON a => a -> ByteString
 decode :: forall a. FromJSON a => ByteString -> Maybe a
 ```
-
-</div>
 
 ```haskell
 val = object [
