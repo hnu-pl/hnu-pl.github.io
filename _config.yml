@@ -39,6 +39,8 @@ paginate_path: blog/page:num
 navigation_header:
 - title: Home
   url: /
+- title: 한국어
+  url: /kr/
 - title: About
   url: /about/
 - title: Blog
