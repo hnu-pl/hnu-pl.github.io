@@ -54,7 +54,7 @@ collections:
   posts:
     title: Posts
     output: true
-    description: "My thoughts and ideas"
+    description: "thoughts and ideas"
     feature_text: |
       Welcome to my blog
     feature_image: "https://picsum.photos/id/866/1300/200"
