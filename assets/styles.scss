@@ -6,7 +6,7 @@ styles: true
 @import "alembic";
 
 body {
-  line-height: 1rem;
+  line-height: 1.1rem;
 }
 
 .feature .container {
@@ -15,8 +15,4 @@ body {
 
 .typeset pre {
   overflow-x: auto;
-}
-
-.item--nav {
-  padding-bottom: .2rem;
 }
