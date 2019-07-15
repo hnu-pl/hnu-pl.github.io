@@ -2,7 +2,7 @@
 layout: post
 title: Aeson 소개
 categories:
-- General
+- Haskell
 feature_image: "https://picsum.photos/id/872/1300/200"
 ---
 
