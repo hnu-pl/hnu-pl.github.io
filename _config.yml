@@ -37,10 +37,10 @@ paginate_path: blog/page:num
 
 # Header nav
 navigation_header:
+- title: 한국어
+  url: /ko/
 - title: Home
   url: /
-- title: 한국어
-  url: /kr/
 - title: About
   url: /about/
 - title: Blog
