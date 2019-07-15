@@ -10,9 +10,13 @@ body {
 }
 
 .feature .container {
-  min-height: 15vh;
+  min-height: 16vh;
 }
 
 .typeset pre {
   overflow-x: auto;
+}
+
+.item-nav {
+  padding: 0.1rem;
 }
