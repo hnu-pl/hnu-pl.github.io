@@ -21,11 +21,11 @@ plugins:
 
 # Site settings
 encoding: 'utf-8'
-title: 'HNU Programming Language Research Group'
+title: 'HNU Programming Languages Research Group'
 logo: '/assets/logos/logo.svg'
 logo_style: 'width:48px; height:48px;'
 logo_name: 'PLRG @ HNU CE'
-description: 'This is my new website'
+description: 'Programming Languages Research Group at Hannam University, Daejon, Korea'
 url: 'https://hnu-pl.github.io'
 baseurl: ''
 permalink: pretty
