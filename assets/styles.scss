@@ -9,6 +9,11 @@ body {
   line-height: 1.35rem;
 }
 
+@media screen and (min-width: 40em)
+.content {
+    width: 66%;
+}
+
 .feature .container {
   min-height: 16vh;
 }
