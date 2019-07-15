@@ -637,7 +637,8 @@ font-weight: bold;
    return age</div></div><div class="suggestion-row" style="float: left;"><div class="suggestion-warning">Why Not:</div><div class="highlight-code" id="haskell">do info <- o .: name
    info .: "age"</div></div>
 
-
+```haskell
+```
 
 ```haskell
 :type ageOf
