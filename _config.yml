@@ -1,7 +1,3 @@
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-
 # Set theme
 remote_theme: daviddarnes/alembic
 
