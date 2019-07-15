@@ -4,7 +4,7 @@ layout: page
 feature_image: "https://picsum.photos/id/989/1300/200"
 feature_text: |
   ### [프로그래밍 언어 연구 그룹](/)
-  #### @ [한남대](http://hnu.kr/) [컴공](http://ce.hnu.kr/)
+  #### @ [한남대학교](http://hnu.kr/) [컴퓨터공학과](http://ce.hnu.kr/)
 ---
 
 우리가 프로그래밍언어 (더 일반적으로는 형식언어)를 연구하는 까닭은 컴퓨팅 분야의 기본 개념을 정확하게 이해함으로써
