@@ -33,7 +33,7 @@ description: 'Programming Languages Research Group at Hannam University, Daejon,
 url: 'https://hnu-pl.github.io'
 baseurl: ''
 permalink: pretty
-timezone: Europe/London
+timezone: Seoul/Asia
 
 # Pagination
 paginate: 5
