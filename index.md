@@ -1,5 +1,5 @@
 ---
-title: Having fun with Programming Languages
+title: Having Fun with PL
 layout: page
 feature_image: "https://picsum.photos/id/989/1300/200"
 feature_text: |
