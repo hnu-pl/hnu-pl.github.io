@@ -5,7 +5,7 @@ styles: true
 
 @import "alembic";
 
-div > .container {
+div.feature > .container {
   height: 200px;
   margin: 0;
 }
