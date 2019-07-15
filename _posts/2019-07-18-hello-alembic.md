@@ -60,7 +60,8 @@ Object (fromList [("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,
 :type encode val
 encode val
 ```
-```encode val :: ByteString
+```
+encode val :: ByteString
 "{\"boolean\":true,\"numbers\":[1,2,3]}"
 ```
 
