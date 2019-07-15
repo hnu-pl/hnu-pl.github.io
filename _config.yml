@@ -52,7 +52,6 @@ navigation_footer:
 # Collections
 collections:
   posts:
-    title: Blog Posts
     output: true
     feature_text: |
       #### thoughts and ideas
