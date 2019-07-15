@@ -10,9 +10,17 @@ This is my very first blog post. I haven't written anything yet but I'm sure I h
 
 한글도 되나요?
 
+
+inline \(\alpha\) work
+
+inline $\alpha$ work
+
 inline $$\alpha$$ work
 
 $$\alpha$$
+
+\[\alpha\]
+
 
 Testing inline math <script type="math/tex">\alpha</script>
 
