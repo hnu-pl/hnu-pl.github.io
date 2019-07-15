@@ -52,9 +52,7 @@ navigation_footer:
 # Collections
 collections:
   posts:
-    title: Posts
     output: true
-    description: "thoughts and ideas"
     feature_text: |
-      ### Welcome to PLRG blog
+      #### thoughts and ideas
     feature_image: "https://picsum.photos/id/866/1300/200"
