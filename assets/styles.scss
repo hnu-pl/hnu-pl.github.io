@@ -5,6 +5,10 @@ styles: true
 
 @import "alembic";
 
+body {
+  line-height: 1rem;
+}
+
 .feature .container {
   min-height: 15vh;
 }
