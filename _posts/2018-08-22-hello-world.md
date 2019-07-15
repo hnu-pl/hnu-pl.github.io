@@ -12,6 +12,8 @@ This is my very first blog post. I haven't written anything yet but I'm sure I h
 
 inline $$\alpha$$ work
 
+$$\alpha$$
+
 Testing inline math <script type="math/tex">\alpha</script>
 
 Testing display math <script type="math/tex; mode=display">\alpha</script>
