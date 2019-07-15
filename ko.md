@@ -1,5 +1,5 @@
 ---
-title: Having Fun with PL
+title: PL 공부의 재미
 layout: page
 feature_image: "https://picsum.photos/id/989/1300/200"
 feature_text: |
