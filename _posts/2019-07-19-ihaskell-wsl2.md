@@ -27,7 +27,7 @@ Haskell을 배워보면 함수형 프로그래밍의 개념을 잡기에 좋더�
 [IHaskell](https://github.com/gibiansky/IHaskell)이 바로 하스켈을 주피터 노트북 환경에서
 구동할 목적으로 만든 주피터 커널로 실행 화면은 아래와 같다.
 
-<img alt='ihaskell-notebook.png' src='https://raw.githubusercontent.com/gibiansky/IHaskell/master/images/ihaskell-notebook.png' width='300px'>
+<img alt='ihaskell-notebook.png' src='https://raw.githubusercontent.com/gibiansky/IHaskell/master/images/ihaskell-notebook.png'>
 
 참고로 앞서 언급한 Anaconda를 통해 하스켈 소스코드로 된 프로젝트를 관리하는 [stack](https://www.haskellstack.org/)이라는
 프로그램을 설치할 수도 있지만, 이건 명령창에 텍스트를 입력하고 설정파일을 직접 구성해야 하는 매우 개발자스러운 물건이다.
