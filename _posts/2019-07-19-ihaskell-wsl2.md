@@ -34,3 +34,22 @@ Haskell을 배워보면 함수형 프로그래밍의 개념을 잡기에 좋더�
 하스켈로 소프트웨어 프로젝트를 진행한다거나 전통적인 텍스트 환경과 자신이 선호하는 에디터가 이미 있는 사람은
 하스켈의 표준적인 개발툴인 stack을 활용해도 무방하다. 이 글은 그런 것에 익숙치 않은 분들을 위해
 조금이라도 더 친절한 환경을 활용할 수 있는 방법을 안내하려는 글이다.
+
+TODO
+```
+sudo apt-get install docker.io
+
+sudo adduser 자기아이디 docker
+다시 로그인 (wsl2 쉘 재실행)
+
+sudo service docker start
+
+docker run --rm -p 8888:8888 -v $PWD:/home/jovyan/pwd --env JUPYTER_TOKEN=x --name ihaskell_notebook crosscompass/ihaskell-notebook:latest
+
+ip address 해서 나오는 172.*.*.* 아이피에
+크롬 등 웹브라우저로 172.*.*.*:8888 에 붙어서 토큰 암호 x 입력
+pwd 디렉토리가 실행한 디렉토리에 연동
+
+
+
+```
