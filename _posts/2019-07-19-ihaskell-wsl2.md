@@ -95,7 +95,7 @@ docker run --rm -p 8888:8888 -v $PWD:/home/jovyan/pwd --env JUPYTER_TOKEN=x --na
 실행을 마치고 나면 데이타가 보관되지 않고 모래성처럼 없어져 버리는데
 `/home/jovyan/pwd` 디렉토리는 도커 환경 밖의 `$PWD`에 해당하는 디렉토리,
 즉 현재 현재 명령을 실행하는 도커 외부의 리눅스 디렉토리를 그대로 사용하겠다는 뜻이다.
-그 외에 [위의 하스켈 노트북 이미지](https://github.com/jamesdbrock/ihaskell-notebook)를
+그 외에 [위의 하스켈 노트북 도커 이미지](https://github.com/jamesdbrock/ihaskell-notebook)를
 더 잘 활용할 수 있는 자세한 내용은 다음 기회에 다른 글을 통해 이야기하기로 하겠다.
 
 이제 서버를 구동한 리눅스 쉘 창은 그대로 두고 새로 웹브라우저를 실행하기 위한 리눅스 쉘 창을 하나 더 띄우도록 하자.
