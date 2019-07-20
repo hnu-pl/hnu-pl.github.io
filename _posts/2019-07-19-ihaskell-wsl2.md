@@ -4,7 +4,6 @@ title: WSL2로 Haskell 노트북 환경 구성
 categories:
 - Haskell
 feature_image: "https://picsum.photos/id/872/1300/200"
-feature_text: last modified at {{ "now" | date: "%Y-%m-%d %H:%M" }}.
 ---
 
 순수 함수형 언어인 하스켈(Haskell)이라는 멋진 언어가 있고
