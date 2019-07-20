@@ -5,7 +5,7 @@ categories:
 - Haskell
 feature_image: "https://picsum.photos/id/872/1300/200"
 ---
-Last modified: {{ site.time | date: "%Y %h" }}
+Last modified: {{ site.time | date: "%Y-%M-%D %H:%m" }}
 
 
 순수 함수형 언어인 하스켈(Haskell)이라는 멋진 언어가 있고
