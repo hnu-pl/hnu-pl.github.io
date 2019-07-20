@@ -5,8 +5,6 @@ categories:
 - Haskell
 feature_image: "https://picsum.photos/id/872/1300/200"
 ---
-Last modified: {{ site.time | date: "%Y-%m-%d %H:%M" }}
-
 
 순수 함수형 언어인 하스켈(Haskell)이라는 멋진 언어가 있고
 Haskell을 배워보면 함수형 프로그래밍의 개념을 잡기에 좋더라는
