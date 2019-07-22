@@ -12,7 +12,9 @@ WSL2를 기준으로 [안내하는 글](/haskell/2019/07/19/ihaskell-wsl2/)을 �
 직접 신경쓰지 않고, 미리 작성된 스크립트로 간편하게
 [crosscompass/ihaskell-notebook](https://github.com/jamesdbrock/ihaskell-notebook)
 도커 이미지를 구동과 필요한 활용할 LTS 라이브러리 패키지를 설치를 돕는 템플릿을
-[GitHub 저장소](https://github.com/hnu-pl/ihaskell-pwd)에 정리해 놓았다.
+아래 [GitHub 저장소](https://github.com/hnu-pl/ihaskell-pwd)에 정리해 놓았다.
+
+ * [https://github.com/hnu-pl/ihaskell-pwd]
 
 자세한 설명은 생략하고 일단 실행 명령 및 스크린샷을 중심으로 간략한 사용방법만 알아보자.
 이미 도커 서비스가 설치된 WSL2를 기준으로 안내한다.
