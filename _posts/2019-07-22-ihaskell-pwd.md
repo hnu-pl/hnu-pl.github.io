@@ -46,11 +46,11 @@ install.sh  LambaCalc.ipynb  LICENSE  README.md  run.sh  Setup.hs  wsl2browser.s
 크롬 브라우저를 기본 설정으로 설치한 경우라면 바로 이 명령어만 입력해도 아래와
 같이 웹브라우저로 방금 전에 구동한 주피터 서버에 접속할 수 있다.
 
-![ip addr](/assets/blog/ihaskell-pwd-03.png)
+![jupyter login](/assets/blog/ihaskell-pwd-03.png)
 
 토큰으로 x를 입력하고 `Log in`하면 아래와 같이 주피터 서버를 사용하기 시작할 수 있다.
 
-![ip addr](/assets/blog/ihaskell-pwd-04.png)
+![jupyter dirs](/assets/blog/ihaskell-pwd-04.png)
 
 위 화면에 가장 위의 `ihaskell_examples` 디렉토리는 IHaskell 개발자들이 제공하는 예제를 가져다 놓은 디렉토리이고
 가장 아래의 `work`는 그냥 빈 디렉토리이며
@@ -58,7 +58,7 @@ install.sh  LambaCalc.ipynb  LICENSE  README.md  run.sh  Setup.hs  wsl2browser.s
 들어가면 아래와 같이 우리가 도커를 실행하면서 본 디렉토리 내용이 그대로 나오는 것을 확인할 수 있다. 그래서
 이곳에다 작업할 노트북 파일을 만들면 도커가 종료되더라도 도커 외부인 리눅스 디렉토리에 그대로 작업 내용이 남아있게 된다.
 
-![ip addr](/assets/blog/ihaskell-pwd-05.png)
+![jupyter pwd](/assets/blog/ihaskell-pwd-05.png)
 
 이 글은 최대한 단순하고 간편하게 IHaskell 도커 이미지를 활용할 수 있도록 안내하는 내용이다.
 더 다양한 방법으로 (예를 들면 `work` 디렉토리도 리눅스상의 다른 디렉토리와 연동해 보고 싶다던지) 활용하려면
