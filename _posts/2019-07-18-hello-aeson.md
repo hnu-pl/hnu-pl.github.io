@@ -6,83 +6,81 @@ categories:
 feature_image: "https://picsum.photos/id/872/1300/200"
 ---
 
-Some examples from https://artyom.me/aeson and others in a IHaskell notebook
+JSON(JavaScript Object Notation)은 속성-값 쌍 혹은 키-값 쌍으로 이루어진 데이터 오브젝트를 전송하기 위해 인간이 읽을 수 있는 텍스트를 사용하는 개방형 표준 포맷이다. 자바스크립트를 사용한 홈페이지를 만들어 봤거나 파이썬이나 자바를 사용해 크롤링을 시도해 봤다면 한번쯤 다뤄봤을 것이다. JSON은 웹사이트 상에서 널리 사용되기 때문에 쉽게 다룰수 있으면 인터넷에서 데이터를 받아오거나 전송하기 쉬워진다.
 
+# Aeson 사용하기
+`Aeson`은 JSON을 파싱하기 위해 하스켈(Haskell)에서 사용하는 라이브러리이다. Aeson을 하스켈에서 사용하기 위해 `Data.Aeson` 를 `Import` 해줘야 한다. 또한 모듈 상단에 `{-# LANGUAGE OverloadedStrings #-}` 를 써줘서  `OverloadedStrings` 을 익스텐션 해야만 ByteString을 사용할 수 있다.
 
 ```haskell
 {-# LANGUAGE OverloadedStrings #-}
 import Data.Aeson
-import Data.Aeson.Types
-import Data.Text
-
-:type encode
-:type decode
-```  
 ```
+
+encode를 사용해 Object로 이루어진 JSON을 String으로 변환할 수 있다.  
+decode를 사용해 String으로 이루어진 JSON을 object로 변환할 수 있다.
+
+```haskell
+> :type encode
 encode :: forall a. ToJSON a => a -> ByteString
+
+>:type decode
 decode :: forall a. FromJSON a => ByteString -> Maybe a
 ```
+
+
 
 ```haskell
 val = object [
   "boolean" .= True,
-  "numbers" .= [1,2,3::Int] ]
+  "numbers" .= [1,2,3::Int]
+  "string" .= "hello" ]
 ```
 
 ```haskell
-:type val
-val
-```
-```
-    {
-        "boolean": true,
-        "numbers": [
-            1,
-            2,
-            3
-        ]
-    }
+> :type val
+val :: Value
+
+> val
+{
+    "string": "hello",
+    "boolean": true,
+    "numbers": [
+        1,
+        2,
+        3
+    ]
+}
 ```
 
-
-IHaskell has its own Display instnace for the `Value`s of JSON objects, as displayed above.
-A plain GHCi would show such `Value`s as bellow.
-
+IHaskell에선 JSON Object인 `Value`에 대한 디스플레이 인스턴스를 위와 같이 보여주지만, GHCi 에선 아래와 같이 출력된다.
 
 ```haskell
-putStr . show $ val
+> putStr . show $ val
+Object (fromList [("string",String "hello"),("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,Number 3.0])])
 ```
-```
-Object (fromList [("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,Number 3.0])])
-```
+# 인코딩 (Object -> ByteString)
 
 ```haskell
-:type encode val
-encode val
-```
-```
+> :type encode val
 encode val :: ByteString
-"{\"boolean\":true,\"numbers\":[1,2,3]}"
+
+> encode val
+"{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}"
 ```
+# 디코딩 (ByteString -> Object)
 
 ```haskell
-decode "{\"boolean\":true,\"numbers\":[1,2,3]}" -- not enough type information
-```
-```
+> decode "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}"  -- 타입
 Nothing
 ```
-
-
 ```haskell
-decode "{\"boolean\":true,\"numbers\":[1,2,3]}" :: Maybe Value
-```
-```
-Just (Object (fromList [("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,Number 3.0])]))
+> decode "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}" :: Maybe Value
+Just (Object (fromList [("string",String "hello"),("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,Number 3.0])]))
 ```
 
 
 ```haskell
-Just val == decode "{\"boolean\":true,\"numbers\":[1,2,3]}"
+Just val == decode "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}"
 ```
 ```
 True
