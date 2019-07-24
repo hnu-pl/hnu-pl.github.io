@@ -16,18 +16,7 @@ JSON(JavaScript Object Notation)은 속성-값 쌍 혹은 키-값 쌍으로 이�
 import Data.Aeson
 ```
 
-`encode`를 사용해 Object로 이루어진 JSON을 String으로 변환할 수 있다.  
-`decode`를 사용해 String으로 이루어진 JSON을 Object로 변환할 수 있다.
-
-```haskell
-> :type encode
-encode :: forall a. ToJSON a => a -> ByteString
-
->:type decode
-decode :: forall a. FromJSON a => ByteString -> Maybe a
-```
-
-Json Object를 만들기 위해선
+`Json Object`는 다음과 같은 구조로 속성-값 쌍인 리스트와 `.=` 연산자로 구성되어있다. 
 
 ```haskell
 val = object [
@@ -58,7 +47,15 @@ IHaskell에선 JSON Object인 `Value`에 대한 디스플레이 인스턴스를 
 > putStr . show $ val
 Object (fromList [("string",String "hello"),("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,Number 3.0])])
 ```
-# 인코딩 (Object -> ByteString)
+
+# ToJSON (Object -> ByteString)
+
+`encode`를 사용해 Object로 이루어진 JSON을 String으로 변환할 수 있다.  
+
+```haskell
+> :type encode
+encode :: forall a. ToJSON a => a -> ByteString
+```
 
 ```haskell
 > :type encode val
@@ -67,12 +64,21 @@ encode val :: ByteString
 > encode val
 "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}"
 ```
-# 디코딩 (ByteString -> Object)
+
+# FromJSON (ByteString -> Object)
+
+`decode`를 사용해 String으로 이루어진 JSON을 Object로 변환할 수 있다. 
 
 ```haskell
-> decode "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}"  -- 타입
+>:type decode
+decode :: forall a. FromJSON a => ByteString -> Maybe a
+```
+
+```haskell
+> decode "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}" -- decode는 Maybe를 명시해줘야 한다.
 Nothing
 ```
+
 ```haskell
 > decode "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}" :: Maybe Value
 Just (Object (fromList [("string",String "hello"),("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,Number 3.0])]))
