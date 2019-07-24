@@ -1,0 +1,27 @@
+- id: kiyung.ahn
+  name: Ki Yung Ahn
+  korean_name: 안기영
+  status: present
+  title: Assistant Professor, PI
+  place: Rm. 90703, Engineering (Bldg #9)., Hannam University (+82-42-629-7497)
+  github: kyagrd
+  dblp: https://dblp.uni-trier.de/pers/hd/a/Ahn:Ki_Yung
+  google_scholar: https://scholar.google.co.uk/citations?user=n-GwE98AAAA
+#  educations: [
+#    "(2019) Ph.D. in Computer Science and Engineering. Seoul National University (supervisor: Prof. [Chung-Kil Hur](https://sf.snu.ac.kr/gil.hur)).",
+#    "(2013) B.S. in Computer Science and Engineering and Mathematical Science. Seoul National University.",
+#  ]
+
+- id: junhwa.song
+  name: Jun Hwa Song
+  korean_name: 송준화
+  status: present
+  title: Undergrad
+  github: asdggwqq
+  
+- id: ingyu.hwang
+  name: In Gyu Hwang
+  korean_name: 황인규
+  status: present
+  title: Undergrad
+  github: hig4342
