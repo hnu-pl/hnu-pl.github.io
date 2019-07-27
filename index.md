@@ -11,3 +11,7 @@ We study programming languages (more generally, formal languages) to seek better
 
 > *Programming languages embody the pragmatics of designing software systems, and also the mathematical concepts which underlie them.*
 > <br> -- [Robin Milner](https://en.wikipedia.org/wiki/Robin_Milner) (from his review on a book by John C. Mitchell)
+
+## Courses (2019 Fall)
+ * [Programming Languages](/pl2019fall)
+ * [(Grad) Programming Lanuages](/grad-pl2019fall)
