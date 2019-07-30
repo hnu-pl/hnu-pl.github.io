@@ -13,6 +13,7 @@ JSON(JavaScript Object Notation)은 속성-값 쌍 혹은 키-값 쌍으로 이�
 
 ```haskell
 {-# LANGUAGE OverloadedStrings #-}
+
 import Data.Aeson
 ```
 
@@ -27,9 +28,11 @@ val = object [
 
 ```haskell
 > :type val
+
 val :: Value
 
 > val
+
 {
     "string": "hello",
     "boolean": true,
@@ -41,7 +44,7 @@ val :: Value
 }
 ```
 
-IHaskell에선 JSON Object인 `Value`에 대한 디스플레이 인스턴스를 위와 같이 보여주지만, GHCi 에선 아래와 같이 출력된다.
+IHaskell에선 JSON Object인 `Value`에 대한 인스턴스를 디스플레이로 위와 같이 보여주지만, GHCi 에선 아래와 같이 출력된다.
 
 ```haskell
 > putStr . show $ val
@@ -84,21 +87,97 @@ Nothing
 Just (Object (fromList [("string",String "hello"),("boolean",Bool True),("numbers",Array [Number 1.0,Number 2.0,Number 3.0])]))
 ```
 
+# Derive 인스턴스를 활용한 제네릭
+
+하스켈의 `GHC`의 제너릭 생성자를 사용해서 `JSON`을 다루는 방법을 알아보자. 우선 제네릭을 사용하기 위해 `DeriveGeneric`을 익스텐션해야 한다. 그리고 `DeriveAnyClass`을 익스텐션 하면 `ToJSON`과 `FromJSON`을 `deriving`에 추가할 수 있다.
 
 ```haskell
-Just val == decode "{\"string\":\"hello\",\"boolean\":true,\"numbers\":[1,2,3]}"
-```
-```
-True
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveAnyClass    #-}
+
+import GHC.Generics (Generic)
 ```
 
+간단한 예로 사람의 정보가 담겨있는 JSON을 구조화 시켜봤다.  
+이름, 나이, 직장(직업명, 회사명)
 
 ```haskell
-Just val == decode (encode val)
+data Person = Person {
+      name       :: String
+    , age        :: Int
+    , occupation :: Occupation
+    } deriving (Generic, Show, ToJSON, FromJSON)
+    
+data Occupation = Occupation
+  { title  :: String
+  , office :: String
+  } deriving (Generic, Show, ToJSON, FromJSON)
 ```
+
+```haskell
+> :type Person
+Person :: String -> Int -> Occupation -> Person
 ```
-True
+
+```haskell
+person1 :: Person -- 예제 1
+person1 = Person
+  { name = "John Doe"
+  , age = 32
+  , occupation = Occupation
+    { title = "Engineer"
+    , office = "Hannam University"
+    }
+  }
+  
+person2 :: Person -- 예제 2
+person2 = Person
+  { name = "Jane Doe"
+  , age = 28
+  , occupation = Occupation
+    { title = "Professor"
+    , office = "Hannam University"
+    }
+  }
 ```
+
+```haskell
+> person1
+Person {name = "John Doe", age = 32, occupation = Occupation {title = "Engineer", office = "Hannam University"}}
+
+> person2
+Person {name = "Jane Doe", age = 28, occupation = Occupation {title = "Teacher", office = "Hannam University"}}
+```
+
+위에서 했던 예제와 마찬가지로 `encode`와 `decode`를 사용할 수 있다. 단 새로운 타입을 만들어 사용했으므로 decode에서 `Maybe Value`가 아닌 `Maybe (type)`을 사용해 주어야 한다.
+
+```haskell
+> encode person1
+"{\"age\":32,\"name\":\"John Doe\",\"occupation\":{\"office\":\"Hannam University\",\"title\":\"Engineer\"}}"
+
+> encode person2
+"{\"age\":28,\"name\":\"Jane Doe\",\"occupation\":{\"office\":\"Hannam University\",\"title\":\"Teacher\"}}"
+```
+
+```haskell
+> decode "{\"age\":32,\"name\":\"John Doe\",\"occupation\":{\"office\":\"Hannam University\",\"title\":\"Engineer\"}}" :: Maybe Person
+Just (Person {name = "John Doe", age = 32, occupation = Occupation {title = "Engineer", office = "Hannam University"}})
+
+> decode "{\"age\":28,\"name\":\"Jane Doe\",\"occupation\":{\"office\":\"Hannam University\",\"title\":\"Teacher\"}}"  :: Maybe Person
+Just (Person {name = "Jane Doe", age = 28, occupation = Occupation {title = "Teacher", office = "Hannam University"}})
+```
+기존의 Value를 쓰지 않고 제네릭을 사용하면 누락되거나 잘못된 키-값 쌍을 쉽게 찾아 낼 수 있다.
+
+```haskell
+> eitherDecode "{\"name\":\"John Doe\",\"occupation\":{\"office\":\"Hannam University\",\"title\":\"Engineer\"}}" :: Either String Person -- age에 대한 데이터가 없을때 
+Left "Error in $: key \"age\" not present"
+
+> eitherDecode "{\"age\":32,\"name\":\"John Doe\",\"occupation\":{\"office\":\"Hannam University\",\"title\":\"Engineer\"}}" :: Either String Person -- 올바른 데이터 
+Right (Person {name = "John Doe", age = 32, occupation = Occupation {title = "Engineer", office = "Hannam University"}})
+```
+
+
+
 
 Selecting specific fields from JSON
 
