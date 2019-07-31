@@ -25,3 +25,10 @@
   status: present
   title: Undergrad
   github: hig4342
+
+- id: soomin.lee
+  name: Soo Min Lee
+  korean_name: 이수민
+  status: present
+  title: Undergrad
+  github: walt4771
