@@ -32,3 +32,10 @@
   status: present
   title: Undergrad
   github: walt4771
+
+- id: bumjun.son
+  name: Bum Jun Son
+  korean_name: 손범준
+  status: present
+  title: Undergrad
+  github: sbj1229
