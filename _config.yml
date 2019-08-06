@@ -58,8 +58,6 @@ collections:
     feature_text: |
       #### thoughts and ideas
     feature_image: "https://picsum.photos/id/866/1300/200"
-
-collections:
   people:
     output: true
     permalink: /:path/
