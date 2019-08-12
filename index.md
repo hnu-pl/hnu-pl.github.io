@@ -13,5 +13,6 @@ We study programming languages (more generally, formal languages) to seek better
 > <br> -- [Robin Milner](https://en.wikipedia.org/wiki/Robin_Milner) (from his review on a book by John C. Mitchell)
 
 ## Courses (2019 Fall)
- * [Programming Languages](/pl2019fall)
- * [(Grad) Programming Lanuages](/grad-pl2019fall)
+ * [프로그래밍언어 Programming Languages](/pl2019fall)
+ * [컴파일러 Compilers](/compiler2019fall)
+ * [프로그래밍언어론 (Grad) Programming Lanuages](/grad-pl2019fall)
